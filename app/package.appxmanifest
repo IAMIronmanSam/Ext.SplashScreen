@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="Ext.Splash Screen" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="Extended Splash Screen" ForegroundText="light" BackgroundColor="#01bdd8">
+      <VisualElements DisplayName="Ext.Splash Screen" Logo="images\Windows_8150x150.png" SmallLogo="images\windows8-icon.png" Description="Extended Splash Screen" ForegroundText="light" BackgroundColor="#000000">
         <DefaultTile ShowName="allLogos" />
         <SplashScreen Image="images\Windows-8.png" BackgroundColor="#01bdd8" />
       </VisualElements>

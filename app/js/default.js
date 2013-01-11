@@ -30,6 +30,7 @@
     function onSplashScreenDismissed() {
 
         //document.querySelector("#learnMore").addEventListener("click", ExtendedSplash.remove, false);
+
     }
 
     function onResize() {
