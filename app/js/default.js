@@ -27,19 +27,14 @@
         }
     };
 
+    // Begin additional loading tasks here…
+    function performSetupTasks() {
+       
+      
+    }
 
+    // The splash screen has been dismissed and the extended splash screen is now in view.
     function onSplashScreenDismissed() {
-
-        //document.querySelector("#learnMore").addEventListener("click", ExtendedSplash.remove, false);
-        //setInterval(function () { ExtendedSplash.remove }, 3000, false);
-        //setTimeout(function () { ExtendedSplash.remove }, 3000);
-
-        //Splash Screen With Delay 
-        /*setTimeout(function () {
-           console.log("3 Seconds Elapsed"); var elem = document.getElementById('extendedSplashScreen');
-           elem.parentNode.removeChild(elem); return false;
-       }, 3000);*/
-
         //Windows Credential Picker
         try {
             var message = "Login";
@@ -53,19 +48,24 @@
                 //document.getElementById("OutputCredentialSaveState").value = (results.credentialSaveOption === Windows.Security.Credentials.UI.CredentialSaveOption.hidden) ? "Hidden" :
                 //                                                             ((results.credentialSaveOption === Windows.Security.Credentials.UI.CredentialSaveOption.selected) ? "Selected" : "Unselected");
                 //WinJS.log && WinJS.log("pickAsync status: " + results.errorCode, "sample", "status");
-                console.log("Result" + results);
-
-                
-                setTimeout(function () {
-                    console.log("3 Seconds Elapsed"); var elem = document.getElementById('extendedSplashScreen');
-                    elem.parentNode.removeChild(elem); return false;
-                }, 3000);
+                console.log("Username:" + results.credentialUserName);
+                console.log("Password:" + results.credentialPassword);
+                removeSplash();
             });
         } catch (err) {
             WinJS.log && WinJS.log("Error message: " + err.message, "sample", "error");
+            MSApp.terminateApp(err);
+            console.log(err.message);
         }
     }
 
+    function removeSplash() {
+        //Delay for Extended Splash Screen
+        setTimeout(function () {
+            console.log("3 Seconds Elapsed"); var elem = document.getElementById('extendedSplashScreen');
+            elem.parentNode.removeChild(elem); return false;
+        }, 3000);
+    }
 
     function onResize() {
         

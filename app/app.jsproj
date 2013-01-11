@@ -56,6 +56,7 @@
     <Content Include="css\extendedSplash.css" />
     <Content Include="default.html" />
     <Content Include="images\logo.png" />
+    <Content Include="images\logo.scale-80.png" />
     <Content Include="images\Windows-8-Splash.png" />
     <Content Include="images\Windows-8.png" />
     <Content Include="images\windows8-icon.png" />
