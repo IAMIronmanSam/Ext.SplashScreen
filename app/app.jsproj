@@ -35,7 +35,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>d2dc88e1-d3a9-40cf-b07e-71623ef37f34</ProjectGuid>
+    <ProjectGuid>53657140-d0da-4374-9606-b653e55dfd93</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">
     <VisualStudioVersion>11.0</VisualStudioVersion>
@@ -47,25 +47,27 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>ExtenSplash_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>Day6_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="css\extendedSplash.css" />
     <Content Include="default.html" />
-    <Content Include="images\Exten.Splash - Copy.png" />
-    <Content Include="images\Login - Copy.png" />
+    <Content Include="images\31Days.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\splashscreen.scale-100.png" />
+    <Content Include="images\splashscreenALT.png" />
     <Content Include="images\storelogo.png" />
-    <Content Include="images\WelcomeWindows-8 - Copy.png" />
-    <Content Include="images\WelcomeWindows-8.scale-100.png" />
+    <Content Include="images\WideLogo.png" />
+    <Content Include="images\Windows-8-Splash.png" />
+    <Content Include="images\Windows-8.png" />
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
-    <None Include="ExtenSplash_TemporaryKey.pfx" />
+    <Content Include="js\extendedSplash.js" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
