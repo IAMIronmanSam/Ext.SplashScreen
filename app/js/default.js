@@ -27,9 +27,16 @@
         }
     };
 
+
     function onSplashScreenDismissed() {
 
         //document.querySelector("#learnMore").addEventListener("click", ExtendedSplash.remove, false);
+        //setInterval(function () { ExtendedSplash.remove }, 3000, false);
+        setTimeout(function () {
+            console.log("3 Seconds Elapsed"); var elem = document.getElementById('extendedSplashScreen');
+            elem.parentNode.removeChild(elem); return false;
+        }, 3000);
+        //setTimeout(function () { ExtendedSplash.remove }, 3000);
 
     }
 
