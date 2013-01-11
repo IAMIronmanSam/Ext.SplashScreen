@@ -32,13 +32,33 @@
 
         //document.querySelector("#learnMore").addEventListener("click", ExtendedSplash.remove, false);
         //setInterval(function () { ExtendedSplash.remove }, 3000, false);
-        setTimeout(function () {
-            console.log("3 Seconds Elapsed"); var elem = document.getElementById('extendedSplashScreen');
-            elem.parentNode.removeChild(elem); return false;
-        }, 3000);
         //setTimeout(function () { ExtendedSplash.remove }, 3000);
 
+        //Splash Screen With Delay 
+        /*setTimeout(function () {
+           console.log("3 Seconds Elapsed"); var elem = document.getElementById('extendedSplashScreen');
+           elem.parentNode.removeChild(elem); return false;
+       }, 3000);*/
+
+        //Windows Credential Picker
+        try {
+            var message = "Login";
+            var targetName = "Welcome";
+            console.log("Credential Picker");
+            Windows.Security.Credentials.UI.CredentialPicker.pickAsync(targetName, message).then(function (results) {
+                document.getElementById("OutputDomainName").value = results.credentialDomainName;
+                document.getElementById("OutputUserName").value = results.credentialUserName;
+                document.getElementById("OutputPassword").value = results.credentialPassword;
+                document.getElementById("OutputCredentialSaved").value = results.credentialSaved ? "Yes" : "No";
+                document.getElementById("OutputCredentialSaveState").value = (results.credentialSaveOption === Windows.Security.Credentials.UI.CredentialSaveOption.hidden) ? "Hidden" :
+                                                                             ((results.credentialSaveOption === Windows.Security.Credentials.UI.CredentialSaveOption.selected) ? "Selected" : "Unselected");
+                WinJS.log && WinJS.log("pickAsync status: " + results.errorCode, "sample", "status");
+            });
+        } catch (err) {
+            WinJS.log && WinJS.log("Error message: " + err.message, "sample", "error");
+        }
     }
+
 
     function onResize() {
         
